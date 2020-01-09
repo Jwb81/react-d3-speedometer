@@ -310,4 +310,21 @@ storiesOf("react-d3-speedometer", module)
       currentValueText={"Value: ${value}"}
     />
   ))
+  .add("Change start and end angles", () => (
+    <ReactSpeedometer
+      value={184}
+      minValue={0}
+      maxValue={200}
+      customSegmentStops={[0, 200 * 0.8, 200 * 0.9, 200]}
+      segmentColors={["#F47560", "#F1E15B", "#ACCF51"]}
+      segments={3}
+      minAngle={-150}
+      maxAngle={150}
+      currentValueText={`${184}/${200} (${184 / 200}%)`}
+      valueFormat="d"
+      placeValueAtBottom={true}
+      maxSegmentLabels={0}
+      labelTranslateYCoef={1.2}
+    />
+  ))
 // .add("Auto Refresh Segments", () => <AutoRefresh />)

@@ -132,9 +132,11 @@ function _renderLabels({ config, svg, centerTx, r }) {
 }
 
 function _renderCurrentValueText({ config, svg }) {
-  const translateX = (config.width + 2 * config.paddingHorizontal) / 2
+  const translateX =
+    (config.width + 2 * config.paddingHorizontal) / config.labelTranslateXCoef
   // move the current value text down depending on padding vertical
-  const translateY = (config.width + 4 * config.paddingVertical) / 2
+  const translateY =
+    (config.width + 4 * config.paddingVertical) / config.labelTranslateYCoef
 
   return (
     svg

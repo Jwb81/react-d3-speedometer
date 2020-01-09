@@ -1,3 +1,11 @@
-// module.exports = {
-//     devtool: 'source-map'
-// };
+module.exports = {
+  //     devtool: 'source-map'
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
+}

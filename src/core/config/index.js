@@ -59,6 +59,13 @@ export const DEFAULT_PROPS = {
   // font sizes
   labelFontSize: "14px",
   valueTextFontSize: "16px",
+
+  minAngle: -90,
+  maxAngle: 90,
+
+  placeValueAtBottom: false,
+  labelTranslateXCoef: 2,
+  labelTranslateYCoef: 2
 }
 
 // default config
@@ -127,6 +134,14 @@ export const getConfig = ({ PROPS, parentWidth, parentHeight }) => {
     // font sizes
     labelFontSize: PROPS.labelFontSize,
     valueTextFontSize: PROPS.valueTextFontSize,
+
+    // start and end angles
+    minAngle: PROPS.minAngle,
+    maxAngle: PROPS.maxAngle,
+
+    placeValueAtBottom: PROPS.placeValueAtBottom,
+    labelTranslateXCoef: PROPS.labelTranslateXCoef,
+    labelTranslateYCoef: PROPS.labelTranslateYCoef,
   }
 
   return Object.assign({}, DEFAULT_CONFIG, config)

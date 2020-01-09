@@ -1,7 +1,7 @@
 {
-  "name": "react-d3-speedometer",
+  "name": "mc-react-d3-speedometer",
   "version": "0.8.0",
-  "description": "React D3 Speedometer Component",
+  "description": "React D3 Speedometer Component (based on repo by Palerdot)",
   "author": {
     "name": "palerdot",
     "email": "palerdot@gmail.com"
@@ -58,6 +58,7 @@
     "babel-plugin-transform-remove-console": "^6.9.4",
     "babel-preset-minify": "^0.5.0",
     "babel-preset-react-app": "^7.0.2",
+    "css-loader": "^3.4.1",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
     "eslint": "^5.15.2",
@@ -75,6 +76,7 @@
     "react-addons-test-utils": "^15.6.2",
     "react-dom": "^16.8.4",
     "react-test-renderer": "^16.8.4",
+    "style-loader": "^1.1.2",
     "webpack": "^4.29.6"
   },
   "peerDependencies": {
