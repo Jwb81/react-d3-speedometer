@@ -65,7 +65,7 @@ export const DEFAULT_PROPS = {
 
   placeValueAtBottom: false,
   labelTranslateXCoef: 2,
-  labelTranslateYCoef: 2
+  labelTranslateYCoef: 2,
 }
 
 // default config
@@ -79,6 +79,8 @@ const DEFAULT_CONFIG = {
   maxAngle: 90,
 
   labelInset: 10,
+
+  showLabelIndexes: null,
 }
 
 export const getConfig = ({ PROPS, parentWidth, parentHeight }) => {
@@ -142,6 +144,8 @@ export const getConfig = ({ PROPS, parentWidth, parentHeight }) => {
     placeValueAtBottom: PROPS.placeValueAtBottom,
     labelTranslateXCoef: PROPS.labelTranslateXCoef,
     labelTranslateYCoef: PROPS.labelTranslateYCoef,
+
+    showLabelIndexes: PROPS.showLabelIndexes,
   }
 
   return Object.assign({}, DEFAULT_CONFIG, config)

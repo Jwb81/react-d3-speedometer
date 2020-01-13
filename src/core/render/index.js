@@ -120,6 +120,12 @@ function _renderLabels({ config, svg, centerTx, r }) {
       const newAngle = config.minAngle + ratio * range
       return `rotate(${newAngle}) translate(0, ${config.labelInset - r})`
     })
+    .style("display", (a, index) => {
+      console.log(a, index)
+      return config.showLabelIndexes && !config.showLabelIndexes.includes(index)
+        ? "none"
+        : "block"
+    })
     .text(config.labelFormat)
     // add class for text label
     .attr("class", "segment-value")
