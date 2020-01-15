@@ -81,6 +81,7 @@ const DEFAULT_CONFIG = {
   labelInset: 10,
 
   showLabelIndexes: null,
+  labelFormatters: {},
 }
 
 export const getConfig = ({ PROPS, parentWidth, parentHeight }) => {
@@ -146,6 +147,8 @@ export const getConfig = ({ PROPS, parentWidth, parentHeight }) => {
     labelTranslateYCoef: PROPS.labelTranslateYCoef,
 
     showLabelIndexes: PROPS.showLabelIndexes,
+
+    labelFormatters: PROPS.labelFormatters,
   }
 
   return Object.assign({}, DEFAULT_CONFIG, config)

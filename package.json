@@ -1,6 +1,6 @@
 {
   "name": "mc-react-d3-speedometer",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "React D3 Speedometer Component (based on repo by Palerdot)",
   "author": {
     "name": "palerdot",

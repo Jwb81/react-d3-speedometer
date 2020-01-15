@@ -121,12 +121,21 @@ function _renderLabels({ config, svg, centerTx, r }) {
       return `rotate(${newAngle}) translate(0, ${config.labelInset - r})`
     })
     .style("display", (a, index) => {
-      console.log(a, index)
       return config.showLabelIndexes && !config.showLabelIndexes.includes(index)
         ? "none"
         : "block"
     })
-    .text(config.labelFormat)
+    .text((a, index) => {
+      // console.log(config.labelFormatters[index])
+      console.log(a, index)
+      const val =
+        config.labelFormatters && config.labelFormatters[index]
+          ? config.labelFormatters[index](a, index)
+          : config.labelFormat(a, index)
+      console.log(val)
+      return val
+    })
+    // .text(config.labelFormat)
     // add class for text label
     .attr("class", "segment-value")
     // styling stuffs

@@ -320,7 +320,7 @@ storiesOf("react-d3-speedometer", module)
       segments={3}
       minAngle={-150}
       maxAngle={150}
-      currentValueText={`${184}/${200} (${184 / 200 * 100}%)`}
+      currentValueText={`${184}/${200} (${(184 / 200) * 100}%)`}
       valueFormat="d"
       placeValueAtBottom={true}
       maxSegmentLabels={0}
@@ -337,11 +337,29 @@ storiesOf("react-d3-speedometer", module)
       segments={3}
       minAngle={-150}
       maxAngle={150}
-      currentValueText={`${184}/${200} (${184 / 200 * 100}%)`}
+      currentValueText={`${184}/${200} (${(184 / 200) * 100}%)`}
       valueFormat="d"
       placeValueAtBottom={true}
       labelTranslateYCoef={1.1}
-      showLabelIndexes={[0,3]}
+      showLabelIndexes={[0, 3]}
+    />
+  ))
+  .add("Format labels at given indexes", () => (
+    <ReactSpeedometer
+      value={184}
+      minValue={0}
+      maxValue={200}
+      customSegmentStops={[0, 184, 200]}
+      segmentColors={["#ACCF51"]}
+      segments={3}
+      currentValueText={`${184}/${200} (${(184 / 200) * 100}%)`}
+      valueFormat="d"
+      placeValueAtBottom={true}
+      labelTranslateYCoef={1.8}
+      showLabelIndexes={[0, 1, 2]}
+      labelFormatters={{
+        1: (val, index) => `${((184 / 200) * 100).toFixed(0)}%`,
+      }}
     />
   ))
 // .add("Auto Refresh Segments", () => <AutoRefresh />)
